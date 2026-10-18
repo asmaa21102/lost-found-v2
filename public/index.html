@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lost & Found — Smart item recovery</title>
+  <meta name="description" content="Report lost and found items, search by photo with AI, and get matched with the owner. For universities, schools, offices and public places.">
+  <meta name="theme-color" content="#f6ece1">
+  <link rel="icon" href="/img/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="/vendor/leaflet/leaflet.css">
+  <link rel="stylesheet" href="/vendor/markercluster/MarkerCluster.css">
+  <link rel="stylesheet" href="/vendor/markercluster/MarkerCluster.Default.css">
+  <link rel="stylesheet" href="/css/app.css?v=3">
+  <script src="/js/theme.js?v=3"></script>
+</head>
+<body>
+  <a class="skip-link" href="#app" data-i18n="nav.skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <a class="brand" href="/" data-link aria-label="Lost & Found home">
+        <span class="brand-mark"><i data-lucide="scan-search"></i></span>
+        <span>Lost&nbsp;&amp;&nbsp;Found<small data-i18n="brand.tagline">Smart item recovery</small></span>
+      </a>
+      <nav class="main-nav" id="main-nav" data-i18n-aria="nav.main">
+        <a href="/browse" data-link data-nav="browse"><i data-lucide="layout-grid"></i><span data-i18n="nav.browse">Browse</span></a>
+        <a href="/map" data-link data-nav="map"><i data-lucide="map"></i><span data-i18n="nav.map">Map</span></a>
+        <a href="/browse?mode=photo" data-link data-nav="photo"><i data-lucide="camera"></i><span data-i18n="nav.photo">Photo search</span></a>
+        <a href="/how-it-works" data-link data-nav="how"><i data-lucide="info"></i><span data-i18n="nav.how">How it works</span></a>
+      </nav>
+      <div class="header-actions" id="header-actions"></div>
+    </div>
+  </header>
+
+  <main id="app" tabindex="-1"></main>
+
+  <footer class="site-footer" id="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <a class="brand" href="/" data-link><span class="brand-mark"><i data-lucide="scan-search"></i></span><span>Lost&nbsp;&amp;&nbsp;Found</span></a>
+          <p class="muted small" style="margin-top:14px;max-width:340px" data-i18n="footer.about">A shared place for campuses, schools, offices and public spaces to reunite people with what they lost. Smart matching suggests possible owners — people always confirm.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.platform">Platform</h4>
+          <ul>
+            <li><a href="/report/lost" data-link data-i18n="cta.report_lost">Report a lost item</a></li>
+            <li><a href="/report/found" data-link data-i18n="cta.report_found">Report a found item</a></li>
+            <li><a href="/browse" data-link data-i18n="nav.browse_reports">Browse reports</a></li>
+            <li><a href="/map" data-link data-i18n="nav.map">Map</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.help">Help</h4>
+          <ul>
+            <li><a href="/how-it-works" data-link data-i18n="nav.how">How it works</a></li>
+            <li><a href="/guide" data-link data-i18n="title.guide">User guide</a></li>
+            <li><a href="/guide/admin" data-link data-i18n="title.guide_admin">Administrator guide</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="footer.trust">Trust</h4>
+          <ul>
+            <li><a href="/privacy" data-link data-i18n="footer.privacy">Privacy &amp; data retention</a></li>
+            <li><a href="/privacy#safety" data-link data-i18n="footer.safety">Safe handovers</a></li>
+            <li><a href="/credits" data-link data-i18n="title.credits">Photo credits</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>© <span id="year"></span> Lost &amp; Found · <span data-i18n="footer.by">Portfolio project by Asmaa</span></span>
+        <span data-i18n="footer.demo">Demo data and photos are illustrative.</span>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toasts" id="toasts" role="status" aria-live="polite"></div>
+
+  <script src="/vendor/leaflet/leaflet.js" defer></script>
+  <script src="/vendor/markercluster/leaflet.markercluster.js" defer></script>
+  <script src="/vendor/lucide/lucide.min.js" defer></script>
+  <script type="module" src="/js/main.js?v=3"></script>
+</body>
+</html>
